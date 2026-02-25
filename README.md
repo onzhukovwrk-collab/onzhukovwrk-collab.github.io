@@ -11,22 +11,8 @@ Pushwoosh.push(['init', {
     defaultNotificationImage: 'https://yoursite.com/img/logo-medium.png', // URL to custom custom notification image
     autoSubscribe: false, // or true. If true, prompts a user to subscribe for pushes upon SDK initialization
 subscribeWidget: {
-    enable: true,
-    position: 'topRight', //possible values: ‘bottomLeft’, ‘bottomRight’, ‘topLeft’, ‘topRight’
-    bgColor: '#12AE7E',
-    bellColor: 'black',
-    bellStrokeColor: '#08754f',
-    bellButtonBorder: '1px solid #379676',
-    shadow: '0px 0px 6px rgba(0, 0, 0, 0.75)',
-    size: '48px',
-    indent: '20px',
-    zIndex: '999999',
-    tooltipText: {
-      successSubscribe: 'You are successfully subscribed!',
-      needSubscribe: 'Get notifications about important news!',
-      blockSubscribe: 'Click to see how to get notifications',
-      alreadySubscribed: 'You are already subscribed'
-    },
+    enable: true
+},
     userId: 'user_id', // optional, set custom user ID
     tags: {
         'Name': 'John Smith'     // optional, set custom Tags
