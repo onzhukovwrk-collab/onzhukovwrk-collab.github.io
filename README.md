@@ -1,5 +1,5 @@
 # onzhukovwrk-collab.github.io
-test
+Sbscribe bld
 <script type="text/javascript" src="//cdn.pushwoosh.com/webpush/v3/pushwoosh-web-notifications.js" async></script>
 <script type="text/javascript">
 var Pushwoosh = Pushwoosh || [];
