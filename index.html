@@ -519,9 +519,9 @@
   // ── Subscribe ─────────────────────────────────────────────────────
 
   function doSubscribe() {
-    Pushwoosh.push(async function(api) {
+    Pushwoosh.push(async function() {
       try {
-        await api.subscribe();
+        await Pushwoosh.subscribe();
         showResult('subResult', '✅ Successfully subscribed!', 'success');
         updateStatus();
       } catch(e) {
@@ -533,9 +533,9 @@
   // ── Unsubscribe ───────────────────────────────────────────────────
 
   function doUnsubscribe() {
-    Pushwoosh.push(async function(api) {
+    Pushwoosh.push(async function() {
       try {
-        await api.unsubscribe();
+        await Pushwoosh.unsubscribe();
         showResult('subResult', '🔕 Successfully unsubscribed.', 'info');
         updateStatus();
       } catch(e) {
@@ -657,9 +657,9 @@
   function doGetInfo() {
     Pushwoosh.push(async function(api) {
       try {
-        const hwid  = await api.getHWID();
-        const token = await api.getPushToken();
-        const userId = await api.getUserId();
+        const hwid  = await Pushwoosh.getHWID();
+        const token = await Pushwoosh.getPushToken();
+        const userId = await Pushwoosh.getUserId();
         const lines = [
           'HWID: ' + (hwid || '—'),
           'Push Token: ' + (token || '—'),
