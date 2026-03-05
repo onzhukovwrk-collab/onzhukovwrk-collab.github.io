@@ -463,7 +463,7 @@
     defaultNotificationTitle: 'Pushwoosh Demo',
     autoSubscribe: false,
     inboxWidget: {
-      enable: true
+      enable: false
     }
   }]);
 
@@ -484,7 +484,7 @@
   async function updateStatus() {
     try {
       Pushwoosh.push(async function(api) {
-        const subscribed = await api.isSubscribed();
+        const subscribed = await Pushwoosh.isSubscribed();
         const dot  = document.getElementById('statusDot');
         const text = document.getElementById('statusText');
         const btnSub   = document.getElementById('btnSubscribe');
